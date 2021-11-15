@@ -1,8 +1,73 @@
-body{ font-family:'Cookie', cursive;
-    font-size: 20px;
-    line-height: 1;
-    color: rgb(116, 95, 51);
-    background-color: rgb(245, 242, 242);
-  }
+ /* Centered layout 1pt
+Styled horizontal nav 2pts. ( See session 3.1) There is a good tutorial at W3Schools. https://www.w3schools.com/css/css_navbar.asp (Links to an external site.)
 
+2 column layout 2pts (Use 2 sections and create rightColumn and leftColumn ids to apply to the sections. This is shown in Session 3.1)
+
+Add a third page. You have the option of a 1 or 2 column layout on this page only. Currently we are calling it school but you can call it whatever you like. 1pt
+Add an image to at least one page. 1pt. https://www.w3schools.com/html/html_images.asp */
+
+body{
+    /* horizontally center */
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    min-width: 640px;
+    font-family:'Cookie', cursive;
+    font-size: 20px;
+    color: cornflowerblue;
+    background-color:white;
+}
+
+ nav{
+    position: sticky;
+    overflow: hidden;
+    color: cornflowerblue;
+    background-color:aliceblue;
+}
+
+
+nav li{
+    float: left;
+    display: block;
+}
+
+nav li a{
+    color: cornflowerblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
  
+li a:hover{
+    background-color: lavender;
+}
+
+
+article{
+    display: block;
+    align-items: center;
+    margin: 60px;
+    justify-content: center;
+}
+
+ section#leftcolumn{
+    clear: left;
+    float: left;
+    width: 60%;
+    margin: auto;
+    justify-content: center;
+}
+
+section#rightcolumn{
+    float: right;
+    width: 40%;
+    margin: auto;
+    justify-content: center;
+}
+
+
+body > footer::after {
+     clear: both;
+     content: "";
+     display: table;
+}
